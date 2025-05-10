@@ -25,8 +25,8 @@ export function Statics(){
   const [isInsideDietSnacksSequence, setIsInsideDietSnacksSequence] = useState(0)
 
 
-  const navigation = useNavigation()
-  const route = useRoute()
+  const navigation = useNavigation<NavigationProp<AppRoutes>>();
+  const route = useRoute<RouteProp<AppRoutes, 'statics'>>();
 
   async function fetchDatas(){
     const { percent } = route.params as RouteParam
